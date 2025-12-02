@@ -13,12 +13,12 @@ function encrypt(key,text){
 
 function decrypt(key, text){
     let encryptedTextArray = text.split("");
-    let encryptedText = "";
+    let decryptedText = "";
     encryptedTextArray.forEach(letter => {
         encryptedText+= alphabets[(alphabets.indexOf(letter) - key) % 26];
     });
 
-   return encryptedText;
+   return decryptedText;
 }
 let encryption = encrypt(3,"hello");
 let decryption = decrypt(3,encryption);
